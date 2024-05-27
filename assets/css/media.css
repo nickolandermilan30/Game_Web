@@ -1,0 +1,96 @@
+@media screen and (max-width: 768px) {
+  .hero-images {
+    flex-wrap: wrap; /* I-wrap ang mga larawan kapag lumalagpas na sa lapad ng screen */
+    justify-content: center; /* I-center ang mga larawan horizontally */
+  }
+
+  .hero-image {
+    width: 50px; /* I-adjust ang sukat ng larawan sa mga screen na may lapad na 768px o mas maliit */
+    margin: 0 10px 10px 0; /* I-adjust ang margin para sa responsive layout */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-image {
+    width: 30px; /* I-adjust ang sukat ng larawan sa mga screen na may lapad na 576px o mas maliit */
+  }
+}
+
+
+
+  /* Media query para sa responsive design */
+@media screen and (max-width: 768px) {
+    .hero-banner {
+      max-width: 500px; /* Baguhin ang maximum na lapad sa mas maliit na screen */
+      margin-top: 30px; /* I-adjust ang margin sa itaas para sa responsive layout */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .hero-banner {
+      max-width: 300px; /* Baguhin ang maximum na lapad sa mas maliit na screen */
+      margin-top: 30px; /* I-adjust ang margin sa itaas para sa responsive layout */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-images {
+      flex-wrap: wrap; /* I-wrap ang mga larawan kapag lumalagpas na sa lapad ng screen */
+      justify-content: center; /* I-center ang mga larawan horizontally */
+    }
+  
+    .hero-image {
+      width: 50px; /* I-adjust ang sukat ng larawan sa mga screen na may lapad na 768px o mas maliit */
+      margin-right: 15px; /* I-adjust ang margin para sa responsive layout */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .hero-image {
+      width: 30px; /* I-adjust ang sukat ng larawan sa mga screen na may lapad na 576px o mas maliit */
+      margin-right: 10px; /* I-adjust ang margin para sa mas maliit na screen */
+    }
+  }
+  
+
+  
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .video-container {
+    width: 100%; /* Gawing full width ang video container sa mga mas maliit na screen */
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  .small-images {
+    top: 125px; /* I-adjust ang pagitan mula sa itaas para sa mobile layout */
+    flex-wrap: wrap; /* I-wrap ang mga larawan kapag nagiging masyadong maliit ang screen */
+    justify-content: center; /* I-center horizontally ang mga larawan */
+  }
+
+  .small-images img {
+    width: 50px; /* I-adjust ang sukat ng mga larawan para sa mobile layout */
+    margin: 5px; /* I-adjust ang mga margin para sa mobile layout */
+  }
+  
+  .center-image {
+    top: 250px; /* I-adjust ang pagitan mula sa itaas para sa mobile layout */
+  }
+}
+
+/* Default styles para sa text-inside-background at text-inside-background-bottom */
+.text-inside-background,
+.text-inside-background-bottom {
+  display: block; /* Ipakita ang mga teksto by default */
+}
+
+/* Media query para sa responsive na layout */
+@media (max-width: 768px) {
+  /* I-set ang display property sa none para itago ang mga teksto kapag nagiging responsive ang layout */
+  .text-inside-background,
+  .text-inside-background-bottom {
+    display: none;
+  }
+}
+

@@ -1,0 +1,76 @@
+/* I-set ang bored na border sa napiling imahe */
+.hero-images img {
+    width: 70px; /* I-set ang sukat ng mga imahe */
+    height: auto; 
+    margin-right: 20px;
+    border-radius: 50%; 
+    cursor: pointer; /* Gawaing cursor pointer upang maging pakiramdam ng user na interactive */
+  }
+  
+  .hero-images img:focus,
+  .hero-images img:hover {
+    border: 4px solid #98ABEE; /* Magdagdag ng border kapag may focus o hover */
+  }
+  
+  /* I-set ang source ng hero banner image */
+  #banner-img {
+    width: 100%; /* I-set ang sukat ng larawan */
+  }
+  
+  .section.hero {
+    background-image: url('./assets/img/bg1.jpg'); /* I-set ang background image */
+    opacity: 0.7; /* I-adjust ang opacity ng background image */
+    background-blend-mode: multiply; /* I-apply ang blend mode na multiply para sa madilim na epekto */
+    position: relative; /* I-set ang position para magamit ang pseudo-element */
+  }
+  
+  .section.hero::before {
+    content: ""; /* I-set ang content ng pseudo-element */
+    position: absolute; /* I-set ang position sa absolute */
+    top: 0; /* I-set ang top position sa 0 */
+    left: 0; /* I-set ang left position sa 0 */
+    width: 100%; /* I-set ang width sa 100% */
+    height: 100%; /* I-set ang height sa 100% */
+    background-color: rgba(0, 0, 0, 0.7); /* I-adjust ang opacity ng background color */
+    z-index: -1; /* I-set ang z-index sa -1 para maibabang layer ito kaysa sa content */
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* I-set ang sukat ng hero banner depende sa lapad ng screen */
+  .hero-banner {
+    width: 100%; /* Gawing full width */
+    max-width: 700px; /* I-set ang maximum na lapad */
+    height: auto; /* Gawing responsive sa taas */
+    margin: 0 auto; /* I-center horizontally */
+    border-radius: 1.2%; 
+    overflow: hidden;
+    background-size: cover; 
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: brightness(300%) hue-rotate(0deg); /* Simulan ang animation na may 300% brightness at 0 degrees hue rotation */
+    }
+    50% {
+      filter: brightness(200%) hue-rotate(0deg); /* Taasan ang brightness at baguhin ang hue rotation sa kalahati ng animation */
+    }
+    100% {
+      filter: brightness(100%) hue-rotate(0deg); /* Ibalik sa orihinal na brightness at hue rotation sa dulo ng animation */
+    }
+  }
+  
+  .section-title::after {
+    content: url("../img/logos.png");
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: glow 2s infinite; /* Gamitin ang animation na glow, tumagal ng 2 segundo, at ulitin nang walang katapusan */
+    filter: brightness(200%) hue-rotate(0deg) drop-shadow(0 0 5px rgb(0, 204, 255)); /* I-apply ang red glow gamit ang drop-shadow */
+  }
+
+  

@@ -1,0 +1,501 @@
+.hero-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: -20px; 
+  margin-bottom: 20px; 
+}
+
+.hero-image {
+  width: 70px; 
+  height: auto; 
+  margin-right: 20px;
+  border-radius: 50%; 
+}
+
+.hero-banner {
+  position: relative; 
+  display: none;
+    width: 100%; 
+    max-width: 700px; 
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1.2%;
+    overflow: hidden;
+    background-size: cover; 
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Kulay itim na may opacity na 50% */
+}
+
+
+.section.hero {
+  /* I-set ang background image */
+  background-image: url('./assets/images/hero-bg.jpg');
+  /* I-adjust ang opacity ng background image */
+  opacity: 0.7; /* Ito ang opacity para sa buong section, kung gusto mo lang ang background image, isama mo ito sa background-image na URL */
+  background-blend-mode: multiply; /* I-apply ang blend mode na multiply para sa madilim na epekto */
+  position: relative; /* I-set ang position para magamit ang pseudo-element */
+}
+
+.section.hero::before {
+  content: ""; /* I-set ang content ng pseudo-element */
+  position: absolute; /* I-set ang position sa absolute */
+  top: 0; /* I-set ang top position sa 0 */
+  left: 0; /* I-set ang left position sa 0 */
+  width: 100%; /* I-set ang width sa 100% */
+  height: 100%; /* I-set ang height sa 100% */
+  background-color: rgba(0, 0, 0, 0.7); /* I-adjust ang opacity ng background color */
+  z-index: -1; /* I-set ang z-index sa -1 para maibabang layer ito kaysa sa content */
+}
+
+
+
+.hero-banner {
+  display: flex;
+  justify-content: center; /* I-center horizontally */
+  align-items: center; /* I-center vertically */
+  width: 100px; /* Sukat ng width */
+  height: 100px; /* Sukat ng height */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* I-set ang sukat ng hero banner depende sa lapad ng screen */
+.hero-banner {
+  width: 100%; /* Gawing full width */
+  max-width: 700px; /* I-set ang maximum na lapad */
+  height: auto; /* Gawing responsive sa taas */
+  margin: 0 auto; /* I-center horizontally */
+  border-radius: 1.2%; 
+  overflow: hidden;
+  background-size: cover; 
+}
+
+/* Default styles */
+.video-container {
+  position: relative;
+  width: 380px; /* Default width */
+  height: 470px; /* Default height */
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Add your CSS styles here */
+.btn-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* I-adjust ang sukat base sa iyong preference */
+  height: 30px; /* I-adjust ang sukat base sa iyong preference */
+  border-radius: 50%; /* Gawing bilog */
+  background-color: white; /* Kulay ng button */
+  color: black; /* Kulay ng text */
+  font-size: 20px; /* I-adjust ang sukat base sa iyong preference */
+  text-decoration: none;
+  margin-top: 10px; /* I-adjust ang margin base sa iyong preference */
+  position: relative; /* Para maayos ang pag-positioning ng popup text */
+}
+
+.btn-circle ion-icon {
+  font-size: 15px; /* I-adjust ang sukat base sa iyong preference */
+  color: black; /* Default color when muted */
+}
+
+.btn-circle.unmuted {
+  background-color: #0467A0; /* Color when unmuted */
+}
+
+.btn-circle.unmuted ion-icon {
+  color: white; /* Color when unmuted */
+}
+
+.popup-text {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px); /* Ilipat sa kaliwang bahagi ng button */
+  transform: translateY(-50%);
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap; /* Iwasan ang pag-break ng text sa multiple lines */
+  display: block; /* Ipakita ang popup text nang maagap */
+}
+
+.latest-game-card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px -4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow color and intensity as needed */
+}
+
+
+.live-match-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.player img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-inside-background {
+  position: absolute;
+  top: 35%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: var(--ff-oxanium);
+  color: white; /* Ayusin ang kulay ng teksto kapag kinakailangan */
+  font-size: 20px; /* Ayusin ang laki ng teksto kapag kinakailangan */
+  text-align: left; /* I-set ang alignment sa kaliwa */
+}
+
+.text-inside-background-bottom {
+  position: absolute;
+  top: 55%; /* Ayusin ang distansya mula sa itaas */
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: var(--ff-oxanium);
+  color: white; /* Ayusin ang kulay ng teksto kapag kinakailangan */
+  font-size: 10px; /* Ayusin ang laki ng teksto kapag kinakailangan */
+  text-align: left; /* I-set ang alignment sa kaliwa */
+}
+
+
+
+
+
+
+.player img {
+  width: 100%; /* Siguruhing ang imahe ay kumukupas ng buong lapad ng parent div */
+  height: 100%; /* Siguruhing ang imahe ay kumukupas ng buong taas ng parent div */
+  object-fit: cover; /* I-set ang object-fit sa cover upang siguruhing ang imahe ay mag-cover sa kabuuan ng parent div */
+  border-radius: 3px;
+}
+
+/* Desktop styles */
+.small-images {
+  position: absolute;
+  top: 650px;
+  left: 78%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between; 
+
+}
+
+.small-images img {
+  width: 100px;
+  height: auto;
+  margin: 0 10px;
+  transition: transform 0.3s ease; /* Idagdag ang transition property */
+  border-radius: 3px;
+}
+
+
+
+.small-images img.active {
+  transform: scale(1.2); /* Bawasan ang pag-ikli ng animation */
+}
+
+.center-image {
+  position: absolute;
+  justify-content: center; /* I-center horizontally ang mga elemento sa loob */
+  align-items: center; 
+  top: 61%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* Itakda ang z-index upang mas mababa ang layer ng malaking imahe */
+}
+.center-image img {
+  width: auto; /* I-set ang lapad sa auto upang mapanatili ang aspect ratio */
+  height: auto; /* I-set ang taas sa auto upang mapanatili ang aspect ratio */
+  max-width: 100%; /* I-set ang maximum na lapad sa 100% ng parent element */
+  max-height: 100%; /* I-set ang maximum na taas sa 100% ng parent element */
+  object-fit: contain; /* I-set ang object-fit sa contain upang panatilihin ang aspeto ng larawan */
+  opacity: 0; /* Itago ang larawan sa simula */
+  transition: opacity 10s ease; /* Idagdag ang transition property */
+}
+.center-image img.show {
+  opacity: 9; /* Ipakita ang larawan na may opacity na 1 */
+}
+
+.player-1 {
+  --width: 1500px; /* Palakihin ang lapad */
+  --height: 1100px; /* Palakihin ang taas */
+}
+
+#bigImage {
+  opacity: 0.5; /* I-adjust ang opacity ayon sa iyong gusto */
+  transition: opacity 0.5s ease; /* Idagdag ang transition effect */
+}
+
+#bigImage:hover {
+  opacity: 1; /* Kapag nag-hover, ibalik sa normal opacity */
+}
+
+
+.clear {
+  clear: both;
+}
+img {
+  max-width: 100%;
+  border: 0px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #e73700;
+}
+h2 {
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 36px;
+}
+button {
+  outline: none !important;
+}
+/******* Common Element CSS End *********/
+
+/* -------- title style ------- */
+.line-title {
+  position: relative;
+  width: 400px;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: #e73700;
+}
+
+/******* Middle section CSS Start ******/
+/* -------- Landing page ------- */
+.game-section {
+  padding: 60px 50px;
+}
+.game-section .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+.game-section .item {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.game-section .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+.game-section .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.game-section .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.game-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.game-section .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.game-section .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.game-section .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
+}
+/******** Middle section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 260px;
+    height: 360px;
+  }
+  .game-section .item.active {
+    width: 400px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 46px));
+    -webkit-transform: translateY(calc(100% - 46px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .line-title {
+    width: 330px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px 40px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .game-section .item.active {
+    width: 360px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .line-title {
+    width: 250px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 30px 15px 20px;
+  }
+  .game-section .item {
+    margin: 0 10px 40px;
+    width: 200px;
+    height: 280px;
+  }
+  .game-section .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .game-section .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
