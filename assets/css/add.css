@@ -25,7 +25,7 @@
     background-size: cover; 
 }
 
-
+/* I-set ang overlay na itim na may opacity */
 .overlay {
   position: absolute;
   top: 0;
@@ -190,7 +190,6 @@
   width: 100%; /* Siguruhing ang imahe ay kumukupas ng buong lapad ng parent div */
   height: 100%; /* Siguruhing ang imahe ay kumukupas ng buong taas ng parent div */
   object-fit: cover; /* I-set ang object-fit sa cover upang siguruhing ang imahe ay mag-cover sa kabuuan ng parent div */
-  border-radius: 3px;
 }
 
 /* Desktop styles */
@@ -346,7 +345,7 @@ button {
   align-items: flex-end;
   -webkit-align-items: flex-end;
   background: #343434 no-repeat center center / cover;
-  border-radius: 16px;
+  border-radius: 3px;
   overflow: hidden;
   position: relative;
   transition: all 0.4s ease-in-out;
@@ -400,102 +399,10 @@ button {
   position: relative;
   z-index: 5;
 }
-/******** Middle section CSS End *******/
 
-/***** responsive css Start ******/
+.card-content-overlay img {
+  width: 100px; 
+  height: auto; 
+  border-radius: 20px;
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  h2 {
-    margin-bottom: 32px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 50px 30px;
-  }
-  .game-section .item {
-    margin: 0 12px 60px;
-    width: 260px;
-    height: 360px;
-  }
-  .game-section .item.active {
-    width: 400px;
-  }
-  .game-section .item-desc {
-    transform: translateY(calc(100% - 46px));
-    -webkit-transform: translateY(calc(100% - 46px));
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  h2 {
-    margin-bottom: 32px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .line-title {
-    width: 330px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 50px 30px 40px;
-  }
-  .game-section .item {
-    margin: 0 12px 60px;
-    width: 240px;
-    height: 330px;
-  }
-  .game-section .item.active {
-    width: 360px;
-  }
-  .game-section .item-desc {
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  }
-}
-
-@media (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-  h2 {
-    margin-bottom: 20px;
-  }
-  h3 {
-    margin: 0 0 8px;
-    font-size: 19px;
-    line-height: 24px;
-  }
-  .line-title {
-    width: 250px;
-  }
-
-  /* -------- Landing page ------- */
-  .game-section {
-    padding: 30px 15px 20px;
-  }
-  .game-section .item {
-    margin: 0 10px 40px;
-    width: 200px;
-    height: 280px;
-  }
-  .game-section .item.active {
-    width: 270px;
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-  }
-  .game-section .item-desc {
-    padding: 0 14px 5px;
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  }
 }
